@@ -1,0 +1,20 @@
+{% extends 'index.html' %}  <!-- Extends your main template -->
+{% block content %}
+<h2>Your Bookings</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Service</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for booking in bookings %}
+        <tr>
+            <td>{{ booking.service.name }}</td>
+            <td>{{ booking.date }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'index.html' %}  <!-- Use your main template if available -->
+{% block content %}
+<h2>Our Services</h2>
+<div class="row">
+    {% for service in services %}
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ service.name }}</h5>
+                <p class="card-text">{{ service.description }}</p>
+                <p><strong>Price:</strong> ${{ service.price }}</p>
+                <a href="{% url 'book_service' service.id %}" class="btn btn-success">Book Now</a>
+
+
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

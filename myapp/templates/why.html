@@ -67,23 +67,43 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
             </li>
+              <li class="nav-item">
+               <a class="nav-link" href="{% url 'services' %}">
+                   Services
+               </a>
+              </li>
+              <li class="nav-item">
+              {% for service in services %}
+              <a href="{% url 'book_service' service.id %}">
+                  Book Now
+              </a>
+{% endfor %}
+
+
+
+              </li>
+              <li class="nav-item">
+               <a class="nav-link" href="{% url 'bookings' %}">
+                   My Bookings
+               </a>
+              </li>
           </ul>
-          <div class="user_option">
-            <a href="">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <span>
-                Login
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-            </a>
-            <form class="form-inline ">
-              <button class="btn nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
-          </div>
+{#          <div class="user_option">#}
+{#            <a href="">#}
+{#              <i class="fa fa-user" aria-hidden="true"></i>#}
+{#              <span>#}
+{#                Login#}
+{#              </span>#}
+{#            </a>#}
+{#            <a href="">#}
+{#              <i class="fa fa-shopping-bag" aria-hidden="true"></i>#}
+{#            </a>#}
+{#            <form class="form-inline ">#}
+{#              <button class="btn nav_search-btn" type="submit">#}
+{#                <i class="fa fa-search" aria-hidden="true"></i>#}
+{#              </button>#}
+{#            </form>#}
+{#          </div>#}
         </div>
       </nav>
     </header>
@@ -370,7 +390,7 @@
               ABOUT US
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+              This is a hair and beauty salon and spa located in Ruaka,west of Nairobi.We offer servces such as nailcare. waxing, haircare, makeup to all genders
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -391,7 +411,7 @@
               NEED HELP
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+             Incase of any help, feel free to contact us on +254789945665
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -401,15 +421,15 @@
             <div class="info_link-box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span> Gb road 123 london Uk </span>
+                <span>  Ruaka town near the bus park </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>+01 12345678901</span>
+                <span>+254789945665</span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span> demo@gmail.com</span>
+                <span>  alexandranivea@gmail.com</span>
               </a>
             </div>
           </div>

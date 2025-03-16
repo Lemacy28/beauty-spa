@@ -67,23 +67,43 @@
             <li class="nav-item">
               <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
             </li>
+              <li class="nav-item">
+               <a class="nav-link" href="{% url 'services' %}">
+                   Services
+               </a>
+              </li>
+              <li class="nav-item">
+              {% for service in services %}
+              <a href="{% url 'book_service' service.id %}">
+                  Book Now
+              </a>
+{% endfor %}
+
+
+
+              </li>
+              <li class="nav-item">
+               <a class="nav-link" href="{% url 'bookings' %}">
+                   My Bookings
+               </a>
+              </li>
           </ul>
-          <div class="user_option">
-            <a href="">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <span>
-                Login
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-            </a>
-            <form class="form-inline ">
-              <button class="btn nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
-          </div>
+{#          <div class="user_option">#}
+{#            <a href="">#}
+{#              <i class="fa fa-user" aria-hidden="true"></i>#}
+{#              <span>#}
+{#                Login#}
+{#              </span>#}
+{#            </a>#}
+{#            <a href="">#}
+{#              <i class="fa fa-shopping-bag" aria-hidden="true"></i>#}
+{#            </a>#}
+{#            <form class="form-inline ">#}
+{#              <button class="btn nav_search-btn" type="submit">#}
+{#                <i class="fa fa-search" aria-hidden="true"></i>#}
+{#              </button>#}
+{#            </form>#}
+{#          </div>#}
         </div>
       </nav>
     </header>
@@ -109,7 +129,7 @@
               <div class="client_info">
                 <div class="client_name">
                   <h5>
-                    Morijorch
+                    Sandra
                   </h5>
                   <h6>
                     Default model text
@@ -118,7 +138,7 @@
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
+                This is the best beauty spa salon with the best services offered making it reliable
               </p>
             </div>
           </div>
@@ -127,7 +147,7 @@
               <div class="client_info">
                 <div class="client_name">
                   <h5>
-                    Rochak
+                    Alexandra
                   </h5>
                   <h6>
                     Default model text
@@ -136,7 +156,7 @@
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
+                I'd really recommend any customer to this salon because to describe the services offered it's truly amazing.
               </p>
             </div>
           </div>
@@ -145,7 +165,7 @@
               <div class="client_info">
                 <div class="client_name">
                   <h5>
-                    Brad Johns
+                    Bradley
                   </h5>
                   <h6>
                     Default model text
@@ -154,7 +174,7 @@
                 <i class="fa fa-quote-left" aria-hidden="true"></i>
               </div>
               <p>
-                Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy, editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Variouseditors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various
+                 I've tried different salons but to be honest this one is incomparable
               </p>
             </div>
           </div>
@@ -201,7 +221,8 @@
               ABOUT US
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+                This is a hair and beauty salon and spa located in Ruaka,west of Nairobi.We offer servces such as nailcare. waxing, haircare, makeup to all genders
+
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -222,7 +243,7 @@
               NEED HELP
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+              Incase of any help, feel free to contact us on +254789945665
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -232,15 +253,15 @@
             <div class="info_link-box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span> Gb road 123 london Uk </span>
+                <span>  Ruaka town near the bus park </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>+01 12345678901</span>
+                <span>+254789945665</span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span> demo@gmail.com</span>
+                <span> alexandranivea@gmail.comm</span>
               </a>
             </div>
           </div>

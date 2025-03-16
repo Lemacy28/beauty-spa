@@ -67,23 +67,45 @@
             <li class="nav-item active">
               <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
             </li>
+              <li class="nav-item">
+               <a class="nav-link" href="{% url 'services' %}">
+                   Services
+               </a>
+              </li>
+              <li class="nav-item">
+               {% for service in services %}
+              <a href="{% url 'book_service' service.id %}">
+                  Book Now
+              </a>
+{% endfor %}
+
+
+
+
+
+              </li>
+              <li class="nav-item">
+               <a class="nav-link" href="{% url 'bookings' %}">
+                   My Bookings
+               </a>
+              </li>
           </ul>
-          <div class="user_option">
-            <a href="">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <span>
-                Login
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-            </a>
-            <form class="form-inline ">
-              <button class="btn nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
-          </div>
+{#          <div class="user_option">#}
+{#            <a href="">#}
+{#              <i class="fa fa-user" aria-hidden="true"></i>#}
+{#              <span>#}
+{#                Login#}
+{#              </span>#}
+{#            </a>#}
+{#            <a href="">#}
+{#              <i class="fa fa-shopping-bag" aria-hidden="true"></i>#}
+{#            </a>#}
+{#            <form class="form-inline ">#}
+{#              <button class="btn nav_search-btn" type="submit">#}
+{#                <i class="fa fa-search" aria-hidden="true"></i>#}
+{#              </button>#}
+{#            </form>#}
+{#          </div>#}
         </div>
       </nav>
     </header>
@@ -107,7 +129,11 @@
         <div class="col-lg-7 col-md-6 px-0">
           <div class="map_container">
             <div class="map-responsive">
-              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+              "<iframe src= https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31911.46281970994!2d36.753200804039444!3d-1.2071340720041885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f22b36e1fe5f9%3A0xea7d820876f42a71!2sRuaka!5e0!3m2!1ssw!2ske!4v1741886590657!5m2!1ssw!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5 px-0">
             </div>
           </div>
         </div>
@@ -165,7 +191,7 @@
               ABOUT US
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+              This is a hair and beauty salon and spa located in Ruaka,west of Nairobi.We offer servces such as nailcare. waxing, haircare, makeup to all genders
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -186,7 +212,7 @@
               NEED HELP
             </h6>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,
+              Incase of any help, feel free to contact us on +254789945665
             </p>
           </div>
           <div class="col-md-6 col-lg-3">
@@ -196,15 +222,15 @@
             <div class="info_link-box">
               <a href="">
                 <i class="fa fa-map-marker" aria-hidden="true"></i>
-                <span> Gb road 123 london Uk </span>
+                <span>  Ruaka town near the bus park </span>
               </a>
               <a href="">
                 <i class="fa fa-phone" aria-hidden="true"></i>
-                <span>+01 12345678901</span>
+                <span>+254789945665</span>
               </a>
               <a href="">
                 <i class="fa fa-envelope" aria-hidden="true"></i>
-                <span> demo@gmail.com</span>
+                <span>  alexandranivea@gmail.com</span>
               </a>
             </div>
           </div>
