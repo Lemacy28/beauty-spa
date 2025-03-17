@@ -13,7 +13,14 @@ def index(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == 'POST':
+        message_name = request.POST['message-name']
+        message_email = request.POST['message-email']
+        message = request.POST['message']
+        return render(request, 'contact.html',{'message_name':message_name, 'message_email':message_email, 'message':message})
+
+    else:
+     return render(request, 'contact.html')
 
 def testimonial(request):
     return render(request, 'testimonial.html')
